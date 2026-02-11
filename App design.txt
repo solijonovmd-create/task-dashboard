@@ -1,0 +1,49 @@
+# API Design
+
+## Frontend Functions (Current Implementation)
+
+| Function        | Description                          | Parameters               |
+|-----------------|--------------------------------------|--------------------------|
+| getAllTasks()   | Returns all tasks from localStorage  | none                     |
+| addTask(task)   | Adds new task, saves, re-renders     | { title, priority, dueDate } |
+| toggleTask(id)  | Flips completed status               | id (string)              |
+| deleteTask(id)  | Removes task                         | id (string)              |
+| filterTasks()   | Shows all/active/completed           | filterType (string)      |
+
+## Future REST API (If Backend Added)
+
+### Endpoints
+
+GET    /api/tasks          // Get all tasks
+GET    /api/tasks/:id      // Get single task
+POST   /api/tasks          // Create new task
+PUT    /api/tasks/:id      // Update task
+DELETE /api/tasks/:id      // Delete task
+
+### Request/Response Format
+
+All endpoints accept and return JSON.
+
+Example POST /api/tasks:
+{
+  "title": "Write report",
+  "priority": "high",
+  "dueDate": "2026-02-20"
+}
+
+Example Response:
+{
+  "id": "1623456789123",
+  "title": "Write report",
+  "completed": false,
+  "priority": "high",
+  "dueDate": "2026-02-20",
+  "createdAt": "2026-02-11T10:30:00Z"
+}
+
+## Status Codes
+200 - Success
+201 - Created
+400 - Bad Request
+404 - Not Found
+500 - Server Error

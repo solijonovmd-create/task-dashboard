@@ -1,0 +1,31 @@
+# Test Plan
+
+## Functional Tests
+
+| ID | Test Case | Steps | Expected Result |
+|----|-----------|-------|-----------------|
+| T1 | Add task with all fields | 1. Enter "Buy groceries"<br>2. Select high priority<br>3. Select tomorrow's date<br>4. Click Add | Task appears in list with correct title, priority, date |
+| T2 | Add task with blank title | 1. Leave title empty<br>2. Click Add | Error message: "Task cannot be blank" |
+| T3 | Complete a task | 1. Click checkbox next to task | Task text has strikethrough, checkbox checked |
+| T4 | Filter active tasks | 1. Complete some tasks<br>2. Click "Active" filter | Only incomplete tasks shown |
+| T5 | Filter completed tasks | 1. Click "Completed" filter | Only done tasks shown |
+| T6 | Delete task | 1. Click X button on task | Task disappears from list |
+| T7 | Persistence | 1. Add tasks<br>2. Refresh page | All tasks still there |
+
+## Non-Functional Tests
+
+| ID | Test Case | Criteria |
+|----|-----------|----------|
+| N1 | Mobile responsive | Layout adjusts cleanly on screen width 375px |
+| N2 | Load time | Page loads under 2 seconds on 4G |
+| N3 | Accessibility | Can navigate using keyboard only |
+
+## Browser Compatibility
+- Chrome (latest)
+- Safari (latest)
+- Firefox (latest)
+- Mobile Safari (iOS)
+- Chrome for Android
+
+## Tested: [DATE]
+## Tester: [YOUR NAME]

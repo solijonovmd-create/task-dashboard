@@ -1,0 +1,20 @@
+# System Architecture
+
+## Frontend (Client)
+- HTML5
+- CSS3 (Flexbox/Grid for responsive)
+- Vanilla JavaScript (no frameworks)
+- LocalStorage for persistence
+
+## Data Flow
+1. User interacts with UI
+2. JavaScript updates state (tasks array)
+3. UI re-renders from state
+4. State saved to localStorage
+5. On load, read from localStorage
+
+## Why this architecture?
+- Zero dependencies, works anywhere
+- No backend = faster to build
+- LocalStorage = "database" without setup
+- Easy to explain in interview

@@ -1,0 +1,24 @@
+# Task Dashboard - Requirements Specification
+
+## Overview
+Personal tool to track daily tasks across work and personal life.
+
+## Users
+Single user (me)
+
+## Functional Requirements
+- Create task with title, due date, priority
+- Mark task complete/incomplete
+- Filter: All, Active, Completed
+- Delete task
+- Data persists after browser refresh
+
+## Non-Functional Requirements
+- Load under 2 seconds
+- Works on phone and desktop
+- Intuitive, zero instructions needed
+
+## Future Scope (Nice to have)
+- Categories (Work, Personal, Errands)
+- Due date reminders
+- Dark mode

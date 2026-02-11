@@ -1,0 +1,27 @@
+# Database Schema
+
+## Tasks Table (stored in localStorage)
+
+| Field       | Type      | Description                    |
+|-------------|-----------|--------------------------------|
+| id          | string    | Unique identifier (timestamp + random) |
+| title       | string    | Task description (required)    |
+| completed   | boolean   | false = pending, true = done   |
+| priority    | string    | low, medium, high              |
+| dueDate     | string    | YYYY-MM-DD format (optional)   |
+| createdAt   | string    | ISO timestamp                  |
+
+## Example Task Object
+
+{
+  "id": "1623456789123",
+  "title": "Finish project documentation",
+  "completed": false,
+  "priority": "high",
+  "dueDate": "2026-02-15",
+  "createdAt": "2026-02-11T10:30:00Z"
+}
+
+## Indexes (Conceptual)
+- Primary key: id
+- Filter queries: completed, priority, dueDate
